@@ -16,10 +16,10 @@ def main():
 
     user_data = haste_user_generator.generate_user(email_generator)
 
+    # todo : implement callback from email generator
+
     WebDriver.fill_input_boxes(browser, user_data)
     WebDriver.click_sign_up_button(browser, button_id="register")
-
-    sleep(Constants.WEBSITE_AFTER_SIGNUP_DELAY_IN_MSEC)
 
     email_generator.confirm_email()
 
