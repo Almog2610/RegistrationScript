@@ -32,13 +32,10 @@ def generate_username():
 
 
 def generate_password():
-    # Todo : check generated password
     password = uuid.uuid4().hex  # get a random string in a UUID format
     password = password[0:string_length]  # convert it in a uppercase letter and trim to your size.
-
     password = uuid.uuid4().hex
     password = password.lower()[0:string_length]
-
     return password
 
 # endregion
