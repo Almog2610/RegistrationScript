@@ -27,19 +27,17 @@ class EmailGenerator:
 
     def get_email(self):
         email_web_element = None
+        self.email_ready = False
         try:
-            email_web_element = self.browser.find_element_by_id("email_ch_text")
-            while not UtilityFunctions.is_validate_english_string(email_web_element.text):
-                self.refresh_fake_email()
-
-            self.email_ready = True
+            email_web_element = self.browser.find_element_by_id("cxtEmail")
             return email_web_element.text
 
         except Exception as exception:
             print("Cannot get email : " + exception.__str__())
 
     def confirm_email(self):
-        confirm_button = self.browser.find_element_by_xpath('//*[@title="CONFIRM YOUR ACCOUNT"]')
+        confirm_button = self.browser.find_element_by_partial_link_text(
+            "https://account.haste.net/my-account/?hm=validate")
         confirm_button.click()
 
     def refresh_fake_email(self):

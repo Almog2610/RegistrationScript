@@ -16,14 +16,14 @@ def main():
 
     user_data = haste_user_generator.generate_user(email_generator)
 
-    # todo : implement callback from email generator
-
     WebDriver.fill_input_boxes(browser, user_data)
     WebDriver.click_sign_up_button(browser, button_id="register")
 
-    email_generator.confirm_email()
+    sleep(Constants.WEBSITE_AFTER_SIGNUP_DELAY_IN_MSEC)
 
     haste_user_generator.create_user_file(Constants.HASTE_USER_FILE_PATH, Constants.HASTE_USER_FILE_NAME)
+
+    # email_generator.confirm_email()
 
     input("Press enter to continue...")
 

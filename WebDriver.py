@@ -1,25 +1,25 @@
 from InputBox import InputBox
 
 
-def fill_input_boxes(browser, haste_user):
+def fill_input_boxes(browser, user):
     input_boxes = get_all_input_boxes(browser)
 
     for input_box in input_boxes:
 
         if input_box.name == "FirstName":
-            input_box.web_element.send_keys(haste_user.first_name)
+            input_box.web_element.send_keys(user.first_name)
 
         elif input_box.name == "Username":
-            input_box.web_element.send_keys(haste_user.username)
+            input_box.web_element.send_keys(user.username)
 
         elif input_box.name == "Email":
-            input_box.web_element.send_keys(haste_user.email)
+            input_box.web_element.send_keys(user.email)
 
         elif input_box.name == "Password":
-            input_box.web_element.send_keys(haste_user.password)
+            input_box.web_element.send_keys(user.password)
 
         elif input_box.name == "ConfirmPassword":
-            input_box.web_element.send_keys(haste_user.password)
+            input_box.web_element.send_keys(user.password)
 
 
 def get_all_input_boxes(browser):
