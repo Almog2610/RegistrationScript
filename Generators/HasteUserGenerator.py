@@ -19,7 +19,7 @@ class HasteUserGenerator:
         return HasteUser(self.name, self.email, self.username, self.password)
 
     def create_user_file(self, path, file_name):
-        with open(path_join(path, file_name), 'w') as user_file:
+        with open(file_name, 'w') as user_file:
             user_file.write("Name : " + str(self.name) + '\n')
             user_file.write("Username : " + str(self.username) + '\n')
             user_file.write("Password : " + str(self.password) + '\n')

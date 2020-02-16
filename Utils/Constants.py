@@ -16,7 +16,7 @@ FILE_READING_MODE = 'r'
 
 # File User file constants
 HASTE_USER_FILE_PATH = ".."
-HASTE_USER_FILE_NAME = "Haste_user_file" + strftime("%H:%M:%S %d-%m-%Y", gmtime())
+HASTE_USER_FILE_NAME = "Haste_user_file.txt"
 
 # Email Generator constants
 FAKE_EMAIL_REFRESH_URL = "https://emailfake.com/fake_email_generator"
