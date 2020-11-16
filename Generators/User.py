@@ -1,9 +1,9 @@
 from Generators import UserGenerator
-from HasteUser import HasteUser
+from GeneralUser import HasteUser
 from os.path import join as path_join
 
 
-class HasteUserGenerator:
+class User:
     def __init__(self):
         self.name = None
         self.username = None
